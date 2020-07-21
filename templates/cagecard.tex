@@ -1,0 +1,91 @@
+\documentclass[letterpaper]{article}
+\usepackage[letterpaper]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[absolute,showboxes]{textpos}
+
+\usepackage{fontspec}
+\usepackage{PTSansNarrow}
+\usepackage[T1]{fontenc}
+
+\renewcommand*\ttdefault{txtt}
+\renewcommand*\familydefault{\ttdefault}
+
+\newcommand{\cwbf}[1]{\textbf{\texttt{#1}}}
+
+
+
+\setlength{\TPHorizModule}{1mm}
+\setlength{\TPVertModule}{\TPHorizModule}
+\textblockorigin{14.5mm}{10mm}
+\TPMargin{1mm}
+% start everything near the top-left corner
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+%% set cardwidth = 79
+%% set cardheight = 120
+
+%% for cage in cages
+
+    %% if loop.index0 != 0 and loop.index0 % 4 == 0
+        \null\newpage
+    %% endif
+
+    %% if loop.index0 % 2 == 0
+        %% set cardstartx = 0
+    %% else
+        %% set cardstartx = cardwidth + 29
+    %% endif
+
+    %% set cardnuminpage = loop.index0 % 4
+    %% if cardnuminpage > 1
+        %% set cardstarty = cardheight
+    %% else
+        %% set cardstarty = 0
+    %% endif
+
+\begin{textblock}{\VAR{cardwidth}}(\VAR{cardstartx}, \VAR{cardstarty})
+
+    \textbf{Rack:} \underline{\VAR{cage["rack"]}}
+    \hfill
+    \textbf{Cage:} \underline{\VAR{cage["cageloc"]}}
+    \hfill
+    \textbf{Desc:} \underline{\VAR{cage["cagename"]}}
+
+    \textbf{PI:} \underline{\VAR{cage["pi"]}} \\
+    \textbf{Protocol:} \underline{\VAR{cage["protocol"]}} \\
+
+%\vspace{0.5cm}
+
+\sffamily
+\setlength\tabcolsep{2pt}
+\begin{tabular}[t]{c c c c p{4.6cm} }
+    \textbf{Tag}  & \textbf{Sex} & \textbf{CL} & \textbf{DOB} & \textbf{Line \& Genotype} \\
+\hline
+
+%% for m in cage["mice"]
+    \VAR{m.tag} &
+    \VAR{m.sex} &
+    \VAR{m.color} &
+    \VAR{m.dob} &
+    %# \makecell{\VAR{m["strain"]} \\ \VAR{m["genotype"]}} \\
+    \VAR{m.strain} \newline \VAR{m.genotype} \\
+%% endfor
+
+\hline
+
+\end{tabular}
+
+\vspace{0.2cm}
+
+\ttfamily
+    \textbf{\small{Updated:}} \small{\today}
+\end{textblock}
+
+%% endfor
+
+
+
+
+\end{document}

@@ -1,0 +1,17 @@
+sitename = "My JCMS Sitename"
+owner = "My Lab"
+pi = "PI Name"
+
+port = 7001
+host = "0.0.0.0"
+flask_secret_key = "secret"
+
+debug = true
+
+db_host = "localhost"
+db_name = "jcms_db"
+db_user = "jcms"
+db_pass = "database password"
+
+redis_host = "localhost"
+redis_port = 6379

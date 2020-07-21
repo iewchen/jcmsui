@@ -1,0 +1,645 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+/*@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');*/
+@import url('https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Roboto+Slab:400,700');
+
+
+/*@import url(print-style.css) print;*/
+
+body {
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    background: #fff;
+}
+
+h1,h2,h3,h4 {
+    font-family: "Open Sans", sans-serif;
+}
+
+.modal-title h3 {
+    margin: 0 0 0 0;
+}
+
+.container {
+    float: left;
+    width: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+
+img.image_picker_image {
+    width: 100%;
+}
+
+
+button#loadmodal {
+    margin: 2px 2px 2px 2px;
+}
+
+.modal-dialog {
+    width: 840px;
+    padding: 10px;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%) !important;
+}
+
+
+.row-margin10 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+/************************** D3 Chart **************************/
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: grey;
+    stroke-width: 1;
+    shape-rendering: crispEdges;
+}
+
+div.tooltip {
+    position: absolute;
+    text-align: left;
+    width: 260px;
+    height: 90px;
+    padding: 2px;
+    font: 12px sans-serif;
+    background: lightsteelblue;
+    border: 0px;
+    border-radius: 8px;
+}
+
+  /*  pointer-events: none;    This line needs to be removed */
+
+circle {
+    color: #00FF00;
+}
+
+
+/************************** D3 End **************************/
+
+.push-right {
+    text-align: right;
+}
+
+.push-left {
+    text-align: left;
+}
+
+.push-center {
+    text-align: center;
+}
+
+tr {
+    border-bottom: dotted 1px;
+}
+
+th {
+    border-bottom: solid 2px;
+    text-align: left;
+    padding-left: 1px;
+    padding-right: 5px;
+}
+
+td {
+    padding-left: 1px;
+    padding-right: 5px;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+tr.bottom-none {
+    border-bottom: none;
+}
+
+#mainhpge {
+    background-color: #efefef;
+    padding: 5px;
+    width: 900px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#mainhpge img {
+    width: 100%;
+}
+
+
+#sample-thumbnail img {
+    width: auto;
+    height: auto;
+}
+
+
+.download:after {
+    font-size: inherit;
+    white-space: nowrap;
+    vertical-align: initial;
+    line-height: 1em;
+    padding-left: 0.2em;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+}
+
+.download:after {
+    content: "\e025";
+}
+
+
+.container-sp {
+    padding: 10px 10px 10px 10px;
+    font-family: monospace;
+}
+
+.sp-warning {
+    background-color: #FFFF00;
+}
+
+.sp-warning .modal-header {
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+.sp-info {
+    background-color: #FFFFFF;
+}
+
+
+
+/* schedule */
+
+.schd-row {
+    position: relative;
+    border-bottom: dotted 1px;
+}
+
+.col-sample-name {
+    text-align: left;
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-desc {
+    text-align: left;
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-label {
+    text-align: left;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-from {
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-matl {
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-start {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-end {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* from: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+.schd-row a span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  z-index: 1;
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif */
+  /*background-image: url('empty.gif');*/
+}
+
+
+.sample-detail {
+    background-color: #f0f0f0;
+    padding: 10px 10px 10px 10px;
+}
+
+.sample-btn-container a {
+    margin-right: 25px;
+}
+
+/* set color for schedule delete icon */
+.show-schddelModal {
+    color: #F00;
+}
+#show-schdaddModal {
+    color: #449d44;
+}
+
+.cage {
+    /*border-style: solid;
+    border-width: 0.5px;
+    */
+    background: #fff;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 10px 5px 10px;
+    display: inline-block;
+    width: 370px;
+    vertical-align: top;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.mouse-count {
+    margin-bottom: 20px;
+}
+
+.rack {
+    border-radius: 3px;
+    background: #ececec;
+    border: 2px solid #666;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+
+.rack-row {
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 0px 0px;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    background: #ececec;
+    border-radius: 3px;
+    border-bottom: 1px solid #aaa;
+    /*
+    white-space: nowrap;
+    overflow: hidden;
+    */
+}
+
+div.cage-title-container {
+    background-color: #d2dfec;
+    padding: 5px 5px;
+}
+
+div.cage-title-container input {
+    float: right;
+}
+
+span.cage-title {
+    display: inline-block
+    font-size: 16px;
+    font-weight: bold;
+}
+
+span.cageloc {
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+tr.bottom-none {
+    border-bottom: none;
+}
+
+#mainhpge {
+    background-color: #efefef;
+    padding: 5px;
+    width: 900px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#mainhpge img {
+    width: 100%;
+}
+
+
+#sample-thumbnail img {
+    width: auto;
+    height: auto;
+}
+
+
+.download:after {
+    font-size: inherit;
+    white-space: nowrap;
+    vertical-align: initial;
+    line-height: 1em;
+    padding-left: 0.2em;
+    display: inline-block;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+}
+
+.download:after {
+    content: "\e025";
+}
+
+
+.container-sp {
+    padding: 10px 10px 10px 10px;
+    font-family: monospace;
+}
+
+.sp-warning {
+    background-color: #FFFF00;
+}
+
+.sp-warning .modal-header {
+    background-color: #000000;
+    color: #FFFF00;
+}
+
+.sp-info {
+    background-color: #FFFFFF;
+}
+
+
+
+/* schedule */
+
+.schd-row {
+    position: relative;
+    border-bottom: dotted 1px;
+}
+
+.col-sample-name {
+    text-align: left;
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-desc {
+    text-align: left;
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-label {
+    text-align: left;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-from {
+    text-align: center;
+    width: 150px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-matl {
+    text-align: center;
+    width: 200px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-start {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.col-sample-end {
+    text-align: center;
+    width: 100px;
+    display: inline-block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* from: http://stackoverflow.com/questions/796087/make-a-div-into-a-link */
+.schd-row a span {
+  position:absolute;
+  width:100%;
+  height:100%;
+  top:0;
+  left: 0;
+
+  z-index: 1;
+  /* edit: fixes overlap error in IE7/8,
+     make sure you have an empty gif */
+  /*background-image: url('empty.gif');*/
+}
+
+
+.sample-detail {
+    background-color: #f0f0f0;
+    padding: 10px 10px 10px 10px;
+}
+
+.sample-btn-container a {
+    margin-right: 25px;
+}
+
+/* set color for schedule delete icon */
+.show-schddelModal {
+    color: #F00;
+}
+#show-schdaddModal {
+    color: #449d44;
+}
+
+.cage {
+    /*border-style: solid;
+    border-width: 0.5px;
+    */
+    background: #fff;
+    padding: 5px 5px 5px 5px;
+    margin: 5px 10px 5px 10px;
+    display: inline-block;
+    width: 370px;
+    vertical-align: top;
+    border-radius: 3px;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.mouse-count {
+    margin-bottom: 20px;
+}
+
+.rack {
+    border-radius: 3px;
+    background: #ececec;
+    border: 2px solid #666;
+    margin-bottom: 40px;
+    padding: 5px;
+}
+
+.rack-row {
+    padding: 5px 0px 5px 0px;
+    margin: 10px 0px 0px 0px;
+    border-bottom: 2px solid #ddd;
+    width: 100%;
+    background: #ececec;
+    border-radius: 3px;
+    border-bottom: 1px solid #aaa;
+    /*
+    white-space: nowrap;
+    overflow: hidden;
+    */
+}
+
+
+
+
+.cw-push-right {
+    float: right;
+}
+
+.ismating {
+    background-color: #79bce7;
+}
+
+.duesoon {
+    background-color: #b2103e;
+	color: #f2f1f6;
+}
+
+.lactation {
+    background-color: #fff455;
+}
+
+.legend {
+    display: inline-block;
+}
+
+.legend span {
+    padding: 0 10px 0 10px;
+}
+
+
+span.clickable-cell,
+span.clickable-mdl,
+tr.clickable-cell,
+td.clickable-cell {
+    cursor: pointer;
+}
+
+
+.clickable-cell:hover {
+    color: #0000ff;
+}
+
+span.clickable-cell {
+    text-decoration: underline;
+}
+
+.push-right-10 {
+    padding-left: 10px;
+}
+
+.mating {
+    margin: 10px 0px 20px 10px;
+    padding-left: 10px;
+    border-left: 5px solid #72ff72;
+}
+
+.litter {
+    margin: 0px 10px 20px 10px;
+    color: #076750;
+}
+
+
+#litter-container th,
+#litter-container td,
+.mating th,
+.mating td {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+#mouseDetail {
+    padding: 5px 10px 5px 10px;
+}
+
+.wean-attention {
+    background-color: #ffff00;
+}
+
+.wean-warning {
+    background-color: #ff0000;
+}
+
+td.filter-highlight {
+    background-color: #d0e4a9;
+}
+
+#strainscount,
+#cagescount {
+    display: inline-block;
+}
+
+#cagescount {
+    padding-left: 50px;
+}
+
+.not-alive {
+    background: #f8c9cb;
+}
+

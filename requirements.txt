@@ -1,0 +1,6 @@
+flask==1.0.2
+flask-wtf==0.14.2
+flask-login==0.4
+flask-mysql==1.4
+redis==3.0.1
+toml==0.10.0

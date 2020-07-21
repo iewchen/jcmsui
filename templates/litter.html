@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <div class="row push-right">
+    {% if user.is_authenticated %}
+    Hi <strong>{{ user.username }}</strong>
+        <a class="greenbtn" href="{{ url_for('logout') }}" title="Log Out">Log Out</a>
+    {% else %}
+        <a class="greenbtn" href="{{ url_for('login') }}" title="Log In">Log In</a>
+    {% endif %}
+  </div>
+
+
+    <ul class="nav nav-tabs">
+        <li><a href="./">Rack</a></li>
+        <li class="active"><a href="./litter.html">Litter</a></li>
+    </ul>
+
+
+    <div class="row">
+        <div id="litter-container"></div>
+    </div>
+
+    <div class="row">
+        </br>
+        <div id="litterscount"></div>
+    </div>
+
+{% endblock %}

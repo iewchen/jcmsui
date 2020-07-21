@@ -1,0 +1,44 @@
+
+@media print {
+
+.nav, .do-not-print {display:none}
+
+body {
+    font-family: serif;
+    font-size: 10pt;
+}
+
+
+
+table td {
+    font-size: 10pt;
+}
+
+
+.cage {
+    border-style: solid;
+    border-width: 0.5px;
+    margin: 2px 2px 2px 2px;
+    padding: 0px 0px 2px 0px;
+}
+
+
+
+.rack {
+    background: #fff;
+    border: none;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+
+
+.duesoon {
+    border: 3px dashed;
+    font-style: italic;
+}
+
+@page {margin: 1cm 0.22cm 1cm 0.22cm}
+
+
+}

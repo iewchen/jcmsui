@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Overview of Mice</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+<script src="//code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css" type="text/css" />
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="./static/style.css" type="text/css" />
+<link rel="stylesheet" href="./static/print.css" type="text/css" />
+<script src="./static/jcmsui.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+  <h2>Overview of Mice</h2>
+  {% block body %}{% endblock %}
+</div>
+
+<!-- Modal for display mouse detail -->
+  <div class="modal" id="mouseModal" role="dialog">
+    <div class="modal-dialog ">
+
+      <!-- Modal content-->
+      <div class="modal-content" id="spModal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="modal-title">
+            <div id="mouseDetailTitle"></div>
+          </div>
+        </div>
+
+        <div id="mouseDetail"></div>
+
+      </div>
+    </div>
+  </div>
+
+<!-- Modal for alert -->
+  <div class="modal" id="alertModal" role="dialog">
+    <div class="modal-dialog ">
+
+      <!-- Modal content-->
+      <div class="modal-content" id="spModal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <div class="modal-title">
+            <div id="alertDetailTitle"></div>
+          </div>
+        </div>
+
+        <div id="alertDetail"></div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

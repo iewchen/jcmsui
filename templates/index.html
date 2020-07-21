@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+  <div class="row push-right do-not-print">
+    {% if user.is_authenticated %}
+    Hi <strong>{{ user.username }}</strong>
+        <a class="greenbtn" href="{{ url_for('logout') }}" title="Log Out">Log Out</a>
+    {% else %}
+        <a class="greenbtn" href="{{ url_for('login') }}" title="Log In">Log In</a>
+    {% endif %}
+  </div>
+
+
+    <ul class="nav nav-tabs">
+        <li class="active"><a href="./">Rack</a></li>
+        <li><a href="./litter.html">Litter</a></li>
+    </ul>
+
+
+  <div class="row do-not-print">
+      <div class="legend">
+          <span class="clickable-mdl ismating">Mating</span>
+          <span class="clickable-mdl duesoon" >Due soon</span>
+          <span class="clickable-mdl lactation">Lactation</span>
+      </div>
+      <div class="cw-push-right">
+          <a href="#" class="btn btn-success btn-sm" id="print-cagecard">
+            <span class="glyphicon glyphicon-print"></span>&nbsp;Cage Cards
+          </a>
+      </div>
+  </div>
+
+  <div class="row mouse-count do-not-print">
+    <div id="strainscount"></div>
+    <div id="cagescount"></div>
+  </div>
+
+
+
+    <div id="rack-container"></div>
+
+{% endblock %}

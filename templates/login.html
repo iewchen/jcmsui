@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block body %}
+
+
+<div id="login">
+    <form action="" method="post" name="login">
+        <p>
+            <span>Username:<br/>
+                {{form.username(size=20)}} (case sensitive)
+            </span>
+        </p>
+
+        <p>
+            <span>Password:<br/>
+                {{form.password(size=20)}}
+            </span>
+        </p>
+
+        <p>{{ form.remember_me  }} Remember Me</p>
+
+        <p>
+            <span style="text-align:center;">
+                Enter username and password to login.
+            </span>
+        </p>
+
+        <p>
+            <span style="text-align:center;">
+                <button type="submit">Login</button>
+            </span>
+        </p>
+    </form>
+</div>
+
+{% endblock %}
